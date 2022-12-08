@@ -14,6 +14,7 @@ const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
 function Theme() {
+  console.log("ovdje sam")
   if (document.documentElement.classList.contains("light")) {
     document.documentElement.classList.remove("light");
     document.documentElement.classList.add("dark");
