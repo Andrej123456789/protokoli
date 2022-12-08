@@ -1,0 +1,125 @@
+:root {
+  align-items: center;
+
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color: black;
+  background-color: white;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+.arrow {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.container {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.container_two {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 100vh;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+}
+
+button {
+  font-family: Tahoma, sans-serif;
+  border: 0;
+
+  color: var(--button-fg);
+  background-color: var(--button-bg);
+}
+
+/* Light mode */
+:root,
+:root.light {
+  --fg: black;
+  --bg: white;
+  --button-fg: black;
+  --button-bg: white;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fg: white;
+    --bg: black;
+    --button-fg: white;
+    --button-bg: black;
+  }
+}
+
+/* Use the variables */
+body {
+  color: var(--fg);
+  background-color: var(--bg);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: var(--fg);
+    background-color: var(--bg);
+  }
+
+  :root.light {
+    color: var(--fg);
+    background-color: var(--bg);
+  }
+}
+
+/* // Dark mode
+// ❗️ keep the rules in sync with the dark mode above!
+:root.dark {
+    --fg: f6f6f6;
+    --bg: 2f2f2f;
+} */
