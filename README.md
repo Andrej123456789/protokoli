@@ -3,6 +3,10 @@ Website for school assignment
 
 Mrežna stranica za školski zadatak
 
+## Credits
+- [Google](https://www.google.com/)
+- [taurifetch](https://github.com/Andrej123456789/taurifetch)
+
 ## How to run
 ### Node.js way
 1. Install Node.js
